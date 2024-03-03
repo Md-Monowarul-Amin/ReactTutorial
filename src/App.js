@@ -41,14 +41,14 @@ function Board(){
   const [squares, setSquares] = useState(Array(9).fill(null));
 
 
-  const winner = calculateWinner(squares);
-  let status;
-  if (winner){
-    status = "Winner" + winner; 
-  }
-  else{
-    status = "Next Player " + (xIsNext? "X" : "O");
-  }
+  // const winner = calculateWinner(squares);
+  // let status;
+  // if (winner){
+  //   status = "Winner" + winner; 
+  // }
+  // else{
+  //   status = "Next Player " + (xIsNext? "X" : "O");
+  // }
 
   function handleClick(i){
     if (squares[i] || calculateWinner(squares)){
@@ -65,7 +65,14 @@ function Board(){
     setSquares(nextSquares);
     console.log("Hello");
   }
-
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner){
+    status = "Winner" + winner; 
+  }
+  else{
+    status = "Next Player " + (xIsNext? "X" : "O");
+  }
 
   return(
     <>
