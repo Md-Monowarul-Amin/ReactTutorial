@@ -57,6 +57,7 @@ function Board(){
         <Square num="8" />
         <Square num="9" />
       </div>
+      
     </>
   )
 }
